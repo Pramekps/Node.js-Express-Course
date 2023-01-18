@@ -12,5 +12,5 @@ app.get("/", (req,res) => {
     res.send('Hello new test script');
 })
 app.listen(port, ()=> {
-    debug("Listening on port 2000 %d",port);
+    console.log("Listening on port %d",port);
 })
