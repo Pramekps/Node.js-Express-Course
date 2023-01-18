@@ -9,7 +9,7 @@ app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname,"/public/")))
 
 app.get("/", (req,res) => {
-    res.send('Hello new test script');
+    res.send('New Version Log');
 })
 app.listen(port, ()=> {
     console.log("Listening on port %d",port);
