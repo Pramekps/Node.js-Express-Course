@@ -12,5 +12,5 @@ app.get("/", (req,res) => {
     res.send('Hello WeePrem');
 })
 app.listen(port, ()=> {
-    debug("Listening on port %d",port);
+    console.log("Listening on port %d",port);
 })
