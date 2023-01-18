@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "set DEBUG = app & nodemon app.js",
-    "debug1": "set DEBUG =* app & node app.js",
+    "start": "set DEBUG =* app & nodemon app.js",
+    "debug": "set DEBUG =* app & node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,11 +17,11 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20"
   },
-  "nodemonConfig":{
-    "restartable":"rs",
-    "delay":2000,
-    "env":{
-      "PORT":3000
-  }
+  "nodemonConfig": {
+    "restartable": "rs",
+    "delay": 2000,
+    "env": {
+      "PORT": 3000
+    }
   }
 }
