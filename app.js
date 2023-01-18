@@ -9,7 +9,7 @@ app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname,"/public/")))
 
 app.get("/", (req,res) => {
-    res.send('Hello WeePrem');
+    res.send('Hello new test script');
 })
 app.listen(port, ()=> {
     debug("Listening on port %d",port);
