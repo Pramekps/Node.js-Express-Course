@@ -4,13 +4,13 @@ const morgan = require('morgan')
 const path = require('path')
 
 const app   = express();
-const PORT  = process.env.PORT;
+const port  = 3000;
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname,"/public/")))
 
 app.get("/", (req,res) => {
-    res.send('Hello WeePrem1');
+    res.send('Hello Wee');
 })
-app.listen(PORT, ()=> {
-    console.log("Listening on PORT %d",PORT);
+app.listen(port, ()=> {
+    console.log("Listening on port %d",port);
 })
