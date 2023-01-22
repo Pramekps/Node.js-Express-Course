@@ -14,7 +14,14 @@ app.set("views", "./src/views");
 app.set("view engine", "ejs")
 
 productRouter.route("/").get((req, res) => {
-    res.send("Hello World !! I am products");
+    res.render("products",{
+        products:[
+        {productTitle :"น้ำยาล้างจาน", productDescription: "สูตร 1", productPrice:10},
+        {productTitle :"น้ำยาล้างจาน", productDescription: "สูตร 2", productPrice:20},
+        {productTitle :"น้ำยาล้างจาน", productDescription: "สูตร 3", productPrice:30},
+        {productTitle :"น้ำยาล้างจาน", productDescription: "สูตร 4", productPrice:40},
+    ],
+    });
 });
 
 productRouter.route("/1").get((req, res) => {
