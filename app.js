@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const path = require('path');
 const chalk = require('chalk');
 const productRouter = express.Router();
-
+const products = require("./data/products.json")
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -14,14 +14,9 @@ app.set("views", "./src/views");
 app.set("view engine", "ejs")
 
 productRouter.route("/").get((req, res) => {
-    res.render("products",{
-        products:[
-        {productTitle :"น้ำยาล้างจาน", productDescription: "สูตร 1", productPrice:10},
-        {productTitle :"น้ำยาล้างจาน", productDescription: "สูตร 2", productPrice:20},
-        {productTitle :"น้ำยาล้างจาน", productDescription: "สูตร 3", productPrice:30},
-        {productTitle :"น้ำยาล้างจาน", productDescription: "สูตร 4", productPrice:40},
-    ],
-    });
+    res.render("products",
+        products,
+    );
 });
 
 productRouter.route("/1").get((req, res) => {
